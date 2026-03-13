@@ -38,38 +38,45 @@
 
 ## 🏗️ Структура программы
 
-```mermaid
-graph TD
-    A[main.cpp] --> B[TestFunctions.h]
-    A --> C[Methods.h]
-    A --> D[ConvergenceTest.h]
-    
-    B --> E[poly0/poly1/poly2/poly3/poly4/poly5/poly6]
-    B --> F[trig_func]
-    B --> G[exact_poly0-6]
-    B --> H[exact_trig]
-    B --> I[trapezoid_error_estimate]
-    B --> J[simpson_error_estimate]
-    
-    C --> K[composite_trapezoid]
-    C --> L[composite_simpson]
-    C --> M[gauss_quadrature]
-    M --> N[get_gauss_3]
-    M --> O[get_gauss_5]
-    M --> P[get_gauss_7]
-    N --> Q[gauss_3]
-    O --> R[gauss_5]
-    P --> S[gauss_7]
-    
-    D --> T[ConvergenceResult]
-    D --> U[test_trapezoid_convergence]
-    D --> V[test_simpson_convergence]
-    D --> W[print_convergence]
-    
-    A --> X[print_header]
-    A --> Y[print_subheader]
-    A --> Z[test_gauss_on_polynomials]
-    A --> AA[test_trapezoid]
-    A --> AB[test_simpson]
-    A --> AC[test_gauss_precision]
-    A --> AD[compute_shell_forces]
+📁 MKE_labwork1
+│
+├── 📄 main.cpp (8 функций)
+│   ├── print_header()
+│   ├── print_subheader() 
+│   ├── test_gauss_on_polynomials()
+│   ├── test_trapezoid()
+│   ├── test_simpson()
+│   ├── test_gauss_precision()
+│   ├── compute_shell_forces()
+│   └── main()
+│
+├── 📄 TestFunctions.h (16 функций)
+│   ├── 📊 Полиномы
+│   │   ├── poly0() - poly6()
+│   │   └── trig_func()
+│   │
+│   ├── 🎯 Точные значения
+│   │   ├── exact_integral_power()
+│   │   ├── exact_poly0() - exact_poly6()
+│   │   └── exact_trig()
+│   │
+│   └── 📈 Оценки погрешности
+│       ├── trapezoid_error_estimate()
+│       └── simpson_error_estimate()
+│
+├── 📄 Methods.h (11 функций)
+│   ├── 🔷 Составные методы
+│   │   ├── composite_trapezoid()
+│   │   └── composite_simpson()
+│   │
+│   └── 🔷 Квадратуры Гаусса
+│       ├── get_gauss_3() → gauss_3()
+│       ├── get_gauss_5() → gauss_5()
+│       ├── get_gauss_7() → gauss_7()
+│       └── gauss_quadrature() (общая)
+│
+└── 📄 ConvergenceTest.h (4 функции)
+    ├── struct ConvergenceResult
+    ├── test_trapezoid_convergence()
+    ├── test_simpson_convergence()
+    └── print_convergence()
