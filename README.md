@@ -36,40 +36,11 @@
 
 ---
 
-## 🏗️ СТРУКТУРА ПРОГРАММЫ
+## 🏗️ ОСНОВНАЯ СТРУКТУРА ПРОГРАММЫ
 
 ```mermaid
 graph TD
     A[main.cpp] --> B[TestFunctions.h]
     A --> C[Methods.h]
     A --> D[ConvergenceTest.h]
-    
-    B --> E[poly0/poly1/poly2/poly3/poly4/poly5/poly6]
-    B --> F[trig_func]
-    B --> G[exact_poly0-6]
-    B --> H[exact_trig]
-    B --> I[trapezoid_error_estimate]
-    B --> J[simpson_error_estimate]
-    
-    C --> K[composite_trapezoid]
-    C --> L[composite_simpson]
-    C --> M[gauss_quadrature]
-    M --> N[get_gauss_3]
-    M --> O[get_gauss_5]
-    M --> P[get_gauss_7]
-    N --> Q[gauss_3]
-    O --> R[gauss_5]
-    P --> S[gauss_7]
-    
-    D --> T[ConvergenceResult]
-    D --> U[test_trapezoid_convergence]
-    D --> V[test_simpson_convergence]
-    D --> W[print_convergence]
-    
-    A --> X[print_header]
-    A --> Y[print_subheader]
-    A --> Z[test_gauss_on_polynomials]
-    A --> AA[test_trapezoid]
-    A --> AB[test_simpson]
-    A --> AC[test_gauss_precision]
-    A --> AD[compute_shell_forces]
+ 
